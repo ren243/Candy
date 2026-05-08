@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
  * the test with JUnit.
  *
 <!--//# BEGIN TODO: Name, student ID, and date-->
-<p><b>Replace this line</b></p>
+Razzan Ikhsan Raisa, 2279118, 8/5/2026
 <!--//# END TODO-->
  */
 public class CandyTest {
@@ -39,7 +39,32 @@ public class CandyTest {
     }
 
 //# BEGIN TODO: Additional test cases
-// Replace this line
+    @Test
+    public void testDivideImpossibleRemainder() {
+        check(3, 10, false);
+    }
+
+    @Test
+    public void testDivideByZeroKids() {
+        check(0, 15, false);
+    }
+
+    @Test
+    public void testDivideMoreKidsThanCandies() {
+        check(10, 5, false);
+    }
+
+    @Test
+    public void testDivideZeroCandies() {
+        check(5, 0, true);
+    }
+
+    @Test
+    public void testDivideLargeValues() {
+        long largeK = 1000000000L;
+        long largeC = 200000000000000000L;
+        check(largeK, largeC, true); 
+    }
 //# END TODO
 
 }
